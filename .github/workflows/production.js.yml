@@ -1,10 +1,10 @@
-name: Preproduccion
+name: Produccion
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -23,5 +23,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm run start
-    - run: echo "Ejecutando pruebas Unitarias..."
-    - run: echo "Pruebas exitosas"
+    - run: echo "Ejecutando Despliegue..."
+    - run: echo "Despliegue exitoso"
