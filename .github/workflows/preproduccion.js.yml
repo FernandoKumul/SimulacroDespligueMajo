@@ -23,6 +23,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Preproduccion
-      run: npm run start
-      run: echo "Ejecutando pruebas Unitarias..."
-      run: echo "Pruebas exitosas"
+      run: |
+        npm run start
+        echo "Ejecutando pruebas Unitarias..."
+        echo "Pruebas exitosas"
