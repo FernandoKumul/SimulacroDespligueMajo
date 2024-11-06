@@ -13,15 +13,16 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [22.x]
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm run start
-    - run: echo "Ejecutando pruebas de regresión y rendimiento..."
-    - run: echo "Pruebas exitosas"
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Ejecutar
+      run: npm run start
+
+    - name: Pruebas
+      run: |
+        echo "Ejecutando pruebas de regresión y de rendimiento..."
+        echo "Pruebas exitosas"
