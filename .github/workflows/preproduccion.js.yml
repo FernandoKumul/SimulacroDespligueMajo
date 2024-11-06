@@ -22,7 +22,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    name: Preproduccion
-    - run: npm run start
-    - run: echo "Ejecutando pruebas Unitarias..."
-    - run: echo "Pruebas exitosas"
+    - name: Preproduccion
+      run: npm run start
+      run: echo "Ejecutando pruebas Unitarias..."
+      run: echo "Pruebas exitosas"
