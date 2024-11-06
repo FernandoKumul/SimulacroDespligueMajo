@@ -13,11 +13,20 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [22.x]
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-    - run: npm run start
-    - run: echo "Ejecutando Despliegue..."
-    - run: echo "Despliegue exitoso"
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Ejecutar
+      run: npm run start
+
+    - name: Despliegue
+      run: |
+        echo "Ejecutando Despliegue.."
+        echo "Despliegue exitoso"
+
+    - name: Monitoreo
+      run:
+        echo "Ejecutando métricas de monitoreo..."
