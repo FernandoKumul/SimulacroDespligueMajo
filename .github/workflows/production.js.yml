@@ -34,7 +34,6 @@ jobs:
       run:
         echo "Ejecutando métricas de monitoreo..."
 
-jobs:
   deploy:
     environment:
       name: github-pages
